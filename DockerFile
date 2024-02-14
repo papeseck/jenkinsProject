@@ -1,9 +1,5 @@
 FROM openjdk:17-jdk-slim
-
 LABEL maintainer="Pape Seck diabel1208@gmail.com"
-
 EXPOSE 8080
-
-ADD target/jenkins-0.0.1-SNAPSHOT.jar jenkins.jar
-
-ENTRYPOINT ["java", "-jar", "jenkins.jar"]
+ADD target/jenkinsProject.jar jenkinsProject.jar
+ENTRYPOINT ["java", "-jar", "jenkinsProject.jar"]
