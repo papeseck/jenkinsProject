@@ -67,7 +67,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>jenkinsProject</finalName>
+		<finalName>jenkinsproject</finalName>
 	</build>
 
 </project>
