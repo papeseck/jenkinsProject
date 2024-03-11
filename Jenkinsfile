@@ -21,6 +21,18 @@ pipeline {
                 }
             }
         }
+          stage('Push Image to Docker Hub') {
+                    steps {
+                        script {
+                            withCredentials([usernameColonPassword(credentialsId: 'pds', variable: 'dockerHub')]) {
+                                bat "docker login -u diabel -p Pape12345"
+                                bat 'docker push papeseck/jenkinsproject'
+                            }
+
+
+                        }
+                    }
+                }
 
         }
 
