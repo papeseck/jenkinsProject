@@ -16,7 +16,7 @@ pipeline {
             steps{
                 script{
                     dir('C:/Users/Pape Diabel/Project/jenkinsProject') {
-                        bat 'docker build -t papeseck/jenkinsproject .'
+                        bat 'docker build -t diabel/jenkinsproject .'
                     }
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
                         script {
                             withCredentials([usernameColonPassword(credentialsId: 'pds', variable: 'dockerHub')]) {
                                 bat "docker login -u diabel -p Pape12345"
-                                bat 'docker push papeseck/jenkinsproject'
+                                bat 'docker push diabel/jenkinsproject'
                             }
 
 
