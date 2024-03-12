@@ -30,10 +30,16 @@ Déploiement : Configurez le déploiement avec Docker.
 mvn clean install
 
 # Build Docker image
-docker build -t papeseck/jenkinsproject .
+docker build -t diabel/jenkinsproject .
 
 ##Ci-dessous quelques captures de mon pipeline
 <img width="957" alt="jenkinsProject" src="https://github.com/papeseck/jenkinsProject/assets/102872504/6008493d-dd50-4116-99c5-43d6dc44e02d">
+
+# Push Image to Docker Hub
+docker login -u username -p password
+docker push diabel/jenkinsproject
+<img width="935" alt="jenkinsPr" src="https://github.com/papeseck/jenkinsProject/assets/102872504/3cb6f1f1-8cb5-4cb7-99f8-afebc3e03bef">
+
 <img width="959" alt="consoleJenkins" src="https://github.com/papeseck/jenkinsProject/assets/102872504/a90e898a-8ae0-41a1-9dac-c5e54bc32809">
 
 
